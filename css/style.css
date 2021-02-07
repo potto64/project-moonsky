@@ -1,0 +1,125 @@
+html {
+  background-color: #2e2e2e;
+  color: #a8ffbf;
+  font-family: monospace;
+}
+
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 27ch;
+  animation: typing 3s steps(27), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+.typing-demo2 {
+  width: 15ch;
+  animation: typing 1s steps(15), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+.btn {
+  font-family: helvetica;
+  padding: 0.5% 1%;
+  color: #a8ffbf;
+  text-decoration: none;
+}
+
+.btn1 {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.btn2 {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+}
+
+.btn3 {
+  position: absolute;
+  left: center;
+  top: 60%;
+}
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #a8ffbf;
+	fill: transparent;
+	stroke-width: 1px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s;
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s;
+}
+
+.arrows path.a3 {
+	animation-delay:0s;
+	-webkit-animation-delay:0s;
+}
+
+.center {
+  position: absolute;
+  left: 27%;
+  top: 160%;
+  font-size: 12pt;
+}
